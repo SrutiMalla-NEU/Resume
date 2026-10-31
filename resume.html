@@ -328,10 +328,11 @@
       document.getElementById('bl3').classList.add('show');
       document.getElementById('bl3').innerHTML = '<span class="ok">access granted ✓</span>';
     }, 1150);
-    setTimeout(() => {
-      bootScreen.style.opacity = '0';
-      setTimeout(() => { bootScreen.style.display = 'none'; startCard(); }, 400);
-    }, 1650);
+setTimeout(() => {
+  bootScreen.style.opacity = '0';
+  bootScreen.style.pointerEvents = 'none';
+  setTimeout(() => { bootScreen.style.display = 'none'; startCard(); }, 400);
+}, 1650);
   }
 
   const btn = document.getElementById('themeToggle');
